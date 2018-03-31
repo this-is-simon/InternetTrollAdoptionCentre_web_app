@@ -12,7 +12,5 @@ CREATE TABLE trolls (
   breed VARCHAR(255),
   adoptable BOOLEAN,
   admission_date VARCHAR(255),
-  -- YYYY-MM-DD
-  owner_id INT8
-  -- REFERENCES owners(id)
+  owner_id INT8 REFERENCES owners(id)
 );
