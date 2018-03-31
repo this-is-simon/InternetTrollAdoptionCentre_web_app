@@ -2,7 +2,8 @@ require_relative('../db/sql_runner')
 
 class Troll
 
-  attr_reader :id, :name, :breed, :adoptable, :admission_date, :owner_id
+  attr_reader :id
+  attr_accessor :name, :breed, :adoptable, :admission_date, :owner_id
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
