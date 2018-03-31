@@ -1,6 +1,9 @@
 require_relative('../models/troll')
 require_relative('../models/owner')
 
+Troll.delete_all
+Owner.delete_all
+
 owner1 = Owner.new(
   'name' => 'Simon'
 )
@@ -40,7 +43,7 @@ troll2 = Troll.new(
   'breed' => 'Alt-Right Misogynist',
   'adoptable' => true,
   'admission_date' => '2018-01-14',
-  'owner_id' => owner2.id
+  'owner_id' => nil
 )
 
 troll2.save
@@ -50,7 +53,7 @@ troll3 = Troll.new(
   'breed' => 'Angry Snowflake',
   'adoptable' => true,
   'admission_date' => '2017-10-21',
-  'owner_id' => owner3.id
+  'owner_id' => nil
 )
 
 troll3.save
@@ -60,14 +63,14 @@ troll4 = Troll.new(
   'breed' => 'Free Speech Scumbag',
   'adoptable' => true,
   'admission_date' => '2017-03-10',
-  'owner_id' => owner4.id
+  'owner_id' => nil
 )
 
 troll4.save
 
 troll5 = Troll.new(
   'name' => 'Donald Trump',
-  'breed' => 'Covfefe',
+  'breed' => '"Genius"',
   'adoptable' => true,
   'admission_date' => '2018-03-30',
   'owner_id' => owner2.id
@@ -76,11 +79,13 @@ troll5 = Troll.new(
 troll5.save
 
 troll6 = Troll.new(
-  'name' => 'Alex Jones',
-  'breed' => 'Conspiracy Theorist',
+  'name' => 'John Paul Jones',
+  'breed' => 'Flat Earther',
   'adoptable' => false,
   'admission_date' => '2016-07-18',
   'owner_id' => nil,
 )
 
 troll6.save
+
+p Troll.all

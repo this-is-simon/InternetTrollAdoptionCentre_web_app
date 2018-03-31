@@ -32,4 +32,21 @@ class Troll
 
   end
 
+  def self.all
+
+    sql = "SELECT * FROM trolls"
+    troll_hashes = SqlRunner.run(sql)
+    troll_objects = troll_hashes.map {|troll| Troll.new (troll)  }
+
+    return troll_objects
+
+  end
+
+  def self.delete_all
+
+    sql = "DELETE FROM trolls"
+    SqlRunner.run(sql)
+
+  end
+
 end
