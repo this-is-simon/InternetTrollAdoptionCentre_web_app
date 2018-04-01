@@ -34,10 +34,16 @@ class Troll
 
   def self.all
 
+    #1. Request data from database
     sql = "SELECT * FROM trolls"
+
+    #2. Run Postgres file on data to receive hashes
     troll_hashes = SqlRunner.run(sql)
+
+    #3. Change hashes into objects through mapping
     troll_objects = troll_hashes.map {|troll| Troll.new (troll)  }
 
+    #4. Return objects
     return troll_objects
 
   end

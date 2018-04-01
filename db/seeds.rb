@@ -70,7 +70,7 @@ troll4.save
 
 troll5 = Troll.new(
   'name' => 'Donald Trump',
-  'breed' => '"Genius"',
+  'breed' => 'Very Stable Genius',
   'adoptable' => true,
   'admission_date' => '2018-03-30',
   'owner_id' => owner2.id
