@@ -49,16 +49,6 @@ class Owner
 
   end
 
-  # def self.find(id)
-  #
-  #   sql = "SELECT * FROM trolls WHERE id = $1"
-  #   values = [id]
-  #   result = SqlRunner.run(sql, values).first
-  #   troll = Troll.new(result)
-  #   return troll
-  #
-  # end
-
   def update
 
     sql = "UPDATE owners SET

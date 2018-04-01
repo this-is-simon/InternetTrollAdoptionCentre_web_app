@@ -88,9 +88,6 @@ troll6 = Troll.new(
 
 troll6.save
 
-troll6.name = 'JPJ'
-troll6.update
-
 p Troll.all
 puts ""
 p Owner.all
@@ -98,3 +95,5 @@ puts ""
 p Troll.find(troll4.id)
 puts ""
 p Owner.find(owner1.id)
+puts ""
+p troll1.owner
