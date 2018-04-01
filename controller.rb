@@ -8,6 +8,7 @@ get '/trolls' do
   erb(:index)
 end
 
+#view individual troll
 get '/trolls/:id/edit' do
   @troll = Troll.find(params['id'])
   erb(:show)
