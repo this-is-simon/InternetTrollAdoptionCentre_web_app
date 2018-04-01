@@ -79,7 +79,7 @@ troll5 = Troll.new(
 troll5.save
 
 troll6 = Troll.new(
-  'name' => 'John Paul Jones',
+  'name' => 'Alex Jones',
   'breed' => 'Flat Earther',
   'adoptable' => false,
   'admission_date' => '2016-07-18',
