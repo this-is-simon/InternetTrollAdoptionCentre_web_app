@@ -42,6 +42,21 @@ class Troll
 
   end
 
+  def self.find(id)
+
+    sql = "SELECT * FROM trolls WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values).first
+    troll = Troll.new(result)
+    return troll
+
+  end
+
+  # def owner
+  #   owner = Owner.find(@owner_id)
+    # return owner
+  # end
+
   def update
 
     sql = "UPDATE trolls SET
