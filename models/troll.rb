@@ -42,6 +42,23 @@ class Troll
 
   end
 
+  def update
+
+    sql = "UPDATE trolls SET
+    (
+    name, breed, adoptable, admission_date, owner_id
+    ) =
+    (
+    $1, $2, $3, $4, $5
+    )
+    WHERE id = $6"
+
+    values = [@name, @breed, @adoptable, @admission_date, @owner_id, @id]
+
+    SqlRunner.run( sql, values )
+
+  end
+
   def self.delete_all
 
     sql = "DELETE FROM trolls"

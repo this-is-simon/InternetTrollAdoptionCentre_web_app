@@ -88,6 +88,9 @@ troll6 = Troll.new(
 
 troll6.save
 
+troll6.name = 'JPJ'
+troll6.update
+
 p Troll.all
 puts ""
 p Owner.all
