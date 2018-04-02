@@ -6,13 +6,23 @@
   <input type="text" name="name" id="name" value="<%= @troll.name %>">
 
   <label for="breed">Breed:</label>
-  <selected name="breed" id="breed" selected="<%= @troll.breed%>"><%= @troll.breed %>
+  <input name="breed" id="breed" value="<%= @troll.breed %>"</input>
+
+  <label for="admission-date">Admission date:</label>
+  <input name="admission_date" id="admission-date" value="<%= @troll.admission_date %>"</input>
+
+  <label for="adoptable">Adoptable:</label>
+  <select name="adoptable" id="adoptable">
+    <% if @troll.adoptable == 't' %>Yes <% else %>No<% end %>
+  </select>
 
   <label for="owner_select">Select Owner:</label>
-  <select name="owner_id" id="owner_select" selected="<%= @troll.owner_id  %>"
+  <select name="owner_id" id="owner_select">
+    <option value="">No Owner</option>
     <% @owners.each do |owner| %>
 
-      <% if owner.id == @troll.owner_id %>
+      <% if owner.id.to_i == @troll.owner_id.to_i %>
+
         <option value=<%= owner.id %> selected><%= owner.name %></option>
       <% else %>
         <option value=<%= owner.id %>><%= owner.name %></option>
@@ -20,7 +30,7 @@
     <% end %>
   </select>
 
-  <input type="submit" value="Update">
+  <input type="submit" value="Update"/>
 
 <% if false%>  <h2>Edit <%= @student.format_name %></h2>
   <form method="POST" action="/students/<%= @student.id %>">

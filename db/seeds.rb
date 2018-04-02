@@ -33,7 +33,7 @@ troll1 = Troll.new(
   'breed' => 'Neo Nazi',
   'adoptable' => true,
   'admission_date' => '2018-03-15',
-  'owner_id' => owner1.id
+  'owner_id' => owner4.id
 )
 
 troll1.save
@@ -73,7 +73,7 @@ troll5 = Troll.new(
   'breed' => 'Very Stable Genius',
   'adoptable' => true,
   'admission_date' => '2018-03-30',
-  'owner_id' => owner2.id
+  'owner_id' => nil
 )
 
 troll5.save
