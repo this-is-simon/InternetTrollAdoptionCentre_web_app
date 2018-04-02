@@ -15,10 +15,16 @@ get '/trolls/:id' do
   erb(:show)
 end
 
-
 #edit individual troll
 get '/trolls/:id/edit' do
   @owner = Owner.all
   @troll = Troll.find(params['id'])
   erb(:edit)
+end
+
+#edit/post individual troll
+post '/trolls/:id' do
+  troll = Troll.new(params)
+  troll.update
+  redirect to "/trolls/#{params['id']}"
 end
