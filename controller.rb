@@ -9,6 +9,11 @@ get '/trolls' do
   erb(:index)
 end
 
+get '/trolls/owners' do
+  @owners = Owner.all
+  erb(:"owners/index")
+end
+
 #view individual troll
 get '/trolls/:id' do
   @troll = Troll.find(params['id'])
@@ -29,5 +34,5 @@ post '/trolls/:id' do
     troll.owner_id = nil
   end
   troll.update
-  redirect to "/trolls/#{params['id']}"
+  redirect to "/trolls"
 end

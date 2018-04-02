@@ -13,7 +13,8 @@
 
   <label for="adoptable">Adoptable:</label>
   <select name="adoptable" id="adoptable">
-    <% if @troll.adoptable == 't' %>Yes <% else %>No<% end %>
+    <option value="Yes"  <%= (@troll.adoptable == "Yes") ? "selected" : "" %> >Adoptable</option>
+    <option value="No" <%= (@troll.adoptable == "No") ? "selected" : "" %> >Not Adoptable</option>
   </select>
 
   <label for="owner_select">Select Owner:</label>

@@ -3,7 +3,7 @@
 <% @trolls.each do |troll| %>
 <p>Name: <%= troll.name %></p>
 <p>Breed: <%= troll.breed %></p>
-<p>Adoptable? <% if troll.adoptable == 't' %>Yes <% else %>No<% end %></p>
+<p>Adoptable? <%= troll.adoptable %></p>
 <p><a href="/trolls/<%= troll.id %>">Go to troll</a></p>
 <hr/>
 
