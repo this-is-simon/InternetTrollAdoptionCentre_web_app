@@ -8,8 +8,17 @@ get '/trolls' do
   erb(:index)
 end
 
+
 #view individual troll
-get '/trolls/:id/edit' do
+get '/trolls/:id' do
   @troll = Troll.find(params['id'])
   erb(:show)
+end
+
+
+#edit individual troll
+get '/trolls/:id/edit' do
+  @owner = Owner.all
+  @troll = Troll.find(params['id'])
+  erb(:edit)
 end
