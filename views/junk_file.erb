@@ -1,0 +1,6 @@
+<% if owner.id == @troll.owner_id %>
+  <option value=<%= owner.id %> selected><%= owner.name %></option>
+<% else %>
+  <option value=<%= owner.id %>><%= owner.name %></option>
+
+<% end %>

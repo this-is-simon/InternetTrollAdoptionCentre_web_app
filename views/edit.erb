@@ -5,10 +5,13 @@
   <label for="name">Full name:</label>
   <input type="text" name="name" id="name" value="<%= @troll.name %>">
 
+  <label for="breed">Breed:</label>
+  <selected name="breed" id="breed" selected="<%= @troll.breed%>"><%= @troll.breed %>
+
   <label for="owner_select">Select Owner:</label>
-  <select name="owner_id" id="owner_select" selected="<%= @troll.owner_id  %>">
+  <select name="owner_id" id="owner_select" selected="<%= @troll.owner_id  %>"
     <% @owners.each do |owner| %>
-      
+
       <% if owner.id == @troll.owner_id %>
         <option value=<%= owner.id %> selected><%= owner.name %></option>
       <% else %>
