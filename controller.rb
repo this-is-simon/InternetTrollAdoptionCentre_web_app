@@ -17,7 +17,7 @@ end
 
 #edit individual troll
 get '/trolls/:id/edit' do
-  @owner = Owner.all
+  @owners = Owner.all
   @troll = Troll.find(params['id'])
   erb(:edit)
 end
