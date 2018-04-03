@@ -59,8 +59,10 @@ class Troll
   end
 
   def owner
-    owner = Owner.find(@owner_id)
-    return owner
+    if @owner_id != nil
+      owner = Owner.find(@owner_id)
+      return owner
+    end
   end
 
   def update

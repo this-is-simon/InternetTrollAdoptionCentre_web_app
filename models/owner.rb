@@ -40,7 +40,6 @@ class Owner
   end
 
   def self.find(id)
-
     sql = "SELECT * FROM owners WHERE id = $1"
     values = [id]
     result = SqlRunner.run(sql, values).first
@@ -49,7 +48,6 @@ class Owner
 
   end
 
-  ##can't get this to work
   def trolls
     sql = "SELECT trolls.* FROM trolls INNER JOIN owners ON trolls.owner_id = owners.id WHERE trolls.owner_id = $1"
     values = [@id]
@@ -57,12 +55,6 @@ class Owner
     result = troll_hash.map {|troll| Troll.new (troll)}
     return result
   end
-
-  def get_troll_name()
-
-    return troll().map { |troll| troll.name }
-  end
-  ###
 
   # def troll()
   #   sql = "SELECT trolls.*

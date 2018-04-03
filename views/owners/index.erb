@@ -1,11 +1,21 @@
-<p>The owners index.erb is working.</p>
+<h2>All Owners</h2>
 
 <% @owners.each do |owner| %>
-<p>Name: <%= owner.name %> </p>
+<div class="trollbox">
+  <p>Name: <%= owner.name %> </p>
+  <p>Trolls:</p>
+
+  <% if owner.trolls.length > 0 %>
+
   <ul>
-  <% owner.trolls.each do |troll| %>
-  <li><%= troll.name %></li>
-  <% end %>
+    <% owner.trolls.each do |troll| %>
+    <li><%= troll.name %></li>
+    <% end %>
   </ul>
+
+  <% else %>
+  <p>No Trolls</p>
+  <% end %>
+
+</div>
 <% end %>
-<hr/>

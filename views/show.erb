@@ -1,9 +1,12 @@
 <h2>Internet Troll: <%= @troll.name%></h2>
 
+<div class="trollbox">
 <p>Name: <%= @troll.name %></p>
 <p>Breed: <%= @troll.breed %></p>
 <p>Adoptable? <%= @troll.adoptable %></p>
 <p>Resident since: <%= @troll.admission_date %></p>
+<p><%= @troll.owner.name if @troll.owner_id != nil %></p>
 
 <a href="/trolls/<%= @troll.id %>/edit">Edit</a>
 <form action="/trolls/<%= @troll.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+</div>

@@ -29,10 +29,10 @@ end
 
 #edit/post individual troll
 post '/trolls/:id' do
-  troll = Troll.new(params)
-  if troll.owner_id == ""
-    troll.owner_id = nil
+  if params['owner_id'] == ""
+    params['owner_id'] = nil
   end
+  troll = Troll.new(params)
   troll.update
   redirect to "/trolls"
 end

@@ -28,6 +28,12 @@ owner4 = Owner.new(
 
 owner4.save
 
+owner5 = Owner.new(
+  'name' => 'Claire'
+)
+
+owner5.save
+
 troll1 = Troll.new(
   'name' => 'Richard Spencer',
   'breed' => 'Neo Nazi',
@@ -84,4 +90,15 @@ troll6 = Troll.new(
 
 troll6.save
 
+troll7 = Troll.new(
+  'name' => 'Katie Hopkins',
+  'breed' => 'Career Troll',
+  'adoptable' => 'Yes',
+  'admission_date' => '2016-07-18'
+)
+
+troll7.save
+
 p owner4.trolls
+p troll1.owner
+p troll6.owner
