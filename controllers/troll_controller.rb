@@ -1,22 +1,12 @@
 require('sinatra')
 require('sinatra/contrib/all')
-require_relative('models/owner')
-require_relative('models/troll')
+require_relative('../models/owner')
+require_relative('../models/troll')
 
 #show all trolls
 get '/trolls' do
   @trolls = Troll.all
   erb(:index)
-end
-
-get '/trolls/owners' do
-  @owners = Owner.all
-  erb(:"owners/index")
-end
-
-get '/trolls/owners/new' do
-  @trolls = Troll.all
-  erb(:"owners /new")
 end
 
 #view individual troll
