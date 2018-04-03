@@ -6,7 +6,7 @@ require_relative('../models/troll')
 #show all trolls
 get '/trolls' do
   @trolls = Troll.all
-  erb(:index)
+  erb(:"trolls/index")
 end
 
 #view individual troll
