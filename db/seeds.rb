@@ -98,7 +98,3 @@ troll7 = Troll.new(
 )
 
 troll7.save
-
-p owner4.trolls
-p troll1.owner
-p troll6.owner

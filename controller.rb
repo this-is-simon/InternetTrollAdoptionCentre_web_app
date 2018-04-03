@@ -36,3 +36,10 @@ post '/trolls/:id' do
   troll.update
   redirect to "/trolls"
 end
+
+#delete troll by id
+post '/trolls/:id/delete' do
+  troll = Troll.find(params['id'])
+  troll.delete
+  redirect to '/trolls'
+end

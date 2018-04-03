@@ -58,11 +58,11 @@ p {
   text-decoration: none;
   display: block;
   padding: 1em;
-  color: white;
+  color: snow;
 }
 
 .navigation a:hover {
-  background: #fff;
+  background: snow;
   color: #ff1493;
 }
 
@@ -97,17 +97,19 @@ p {
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 0 2%;
 }
 
 .page h2 {
   width: 100%;
-  margin-left: 5%;
+  margin: 2%;
 }
 /*  -------- Trollboxes --------- */
 .trollbox {
   padding: 40px;
-  width: 200px;
-  max-height: 250px;
+  flex: 1;
+  min-width: 180px;
+  max-width: 300px;
   margin: 10px;
   color: white;
   background: dodgerblue;
@@ -116,8 +118,9 @@ p {
 }
 
 .trollbox a {
+  color: snow;
   text-decoration: none;
-  border: 1px solid white;
+  border: 1px solid snow;
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 0px;
@@ -125,5 +128,6 @@ p {
 }
 
 .trollbox a:hover {
-  background: white;
+  background: snow;
+  color: mediumvioletred;
 }
