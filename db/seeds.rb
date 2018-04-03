@@ -84,4 +84,4 @@ troll6 = Troll.new(
 
 troll6.save
 
-p owner4.troll
+p owner4.trolls

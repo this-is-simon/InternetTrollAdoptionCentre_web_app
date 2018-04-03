@@ -2,7 +2,10 @@
 
 <% @owners.each do |owner| %>
 <p>Name: <%= owner.name %> </p>
-<p>Troll: <%= if owner.troll != nil then owner.troll.name %> </p>
-
+  <ul>
+  <% owner.trolls.each do |troll| %>
+  <li><%= troll.name %></li>
+  <% end %>
+  </ul>
 <% end %>
 <hr/>
