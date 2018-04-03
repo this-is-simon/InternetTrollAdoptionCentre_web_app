@@ -40,6 +40,42 @@ p {
   margin-top: 20%;
 }
 
+.hero-img h1
+{
+  position: relative;
+}
+.hero-img h1:before, .hero-img h1:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+.hero-img h1:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
 
 /*----------  Navigation ----------*/
 .navigation {
@@ -111,13 +147,106 @@ p {
   min-width: 180px;
   max-width: 300px;
   margin: 10px;
-  color: white;
+  color: snow;
   background: dodgerblue;
   text-align: center;
-
 }
 
 .trollbox a {
+  color: snow;
+  text-decoration: none;
+  border: 1px solid snow;
+  padding: 10px;
+  /* margin-top: 10px; */
+  margin-bottom: 0px;
+  display: inline-block;
+}
+
+.trollbox
+{
+  position: relative;
+}
+.trollbox:before, .trollbox:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+.trollbox:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
+.trollbox a:hover {
+  background: snow;
+  color: mediumvioletred;
+}
+
+/*  ---------- Formbox --------------- */
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+form label {
+  padding: 15px;
+  padding-left: 0px;
+}
+
+form input, label, textarea, select {
+  font-size: 1.15em;
+  border: none;
+  padding: 5px;
+}
+
+form input {
+  border-radius: 5px;
+}
+
+form button {
+  background: black;
+}
+
+form input:last-of-type {
+  margin-top: 20px;
+}
+
+.formbox {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  min-width: 180px;
+  max-width: 300px;
+  margin: 10px;
+  color: snow;
+  background: dodgerblue;
+  text-align: center;
+}
+
+.formbox a {
   color: snow;
   text-decoration: none;
   border: 1px solid snow;
@@ -127,7 +256,43 @@ p {
   display: inline-block;
 }
 
-.trollbox a:hover {
+.formbox
+{
+  position: relative;
+}
+.formbox:before, .formbox:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+.formbox:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
+.formbox a:hover {
   background: snow;
   color: mediumvioletred;
 }

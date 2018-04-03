@@ -14,6 +14,11 @@ get '/trolls/owners' do
   erb(:"owners/index")
 end
 
+get '/trolls/owners/new' do
+  @trolls = Troll.all
+  erb(:"owners /new")
+end
+
 #view individual troll
 get '/trolls/:id' do
   @troll = Troll.find(params['id'])
