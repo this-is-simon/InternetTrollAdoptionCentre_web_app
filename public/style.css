@@ -1,4 +1,120 @@
 body {
-  /* background-color: green; */
-  /* background-image: url("/images/homeless.jpg"); */
+  margin: 0;
+  margin-bottom: 30px;
+  font-family: Sans-serif;
+  background: snow;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.15em;
+}
+
+/*------  Main Banner ------------- */
+.hero-img {
+  display: flex;
+  background-image: url("/images/homeless.jpg");
+  width: 100%;
+  margin: 0;
+  background-position: 100% 45%;
+  height: 300px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hero-img h1 {
+  background: cornsilk;
+  justify-content: center;
+  padding: 10px;
+  flex-wrap: wrap;
+  flex-basis: 20%;
+  margin-top: 20%;
+}
+
+
+/*----------  Navigation ----------*/
+.navigation {
+  list-style: none;
+  margin: 0;
+
+  background: mediumvioletred;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-end;
+  font-family: 'Lato', sans-serif;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.navigation a:hover {
+  background: #fff;
+  color: #ff1493;
+}
+
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px dotted rgba(255,255,255,0.3);
+    border-bottom: 1px dotted rgba(0,0,0,0.1);
+  }
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+
+/* ----- Page ------- */
+.page {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.page h2 {
+  width: 100%;
+  margin-left: 5%;
+}
+/*  -------- Trollboxes --------- */
+.trollbox {
+  padding: 40px;
+  width: 200px;
+  max-height: 250px;
+  margin: 10px;
+  color: white;
+  background: dodgerblue;
+  text-align: center;
+
+}
+
+.trollbox a {
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  display: inline-block;
+}
+
+.trollbox a:hover {
+  background: white;
 }

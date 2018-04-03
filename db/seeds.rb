@@ -43,7 +43,7 @@ troll2 = Troll.new(
   'breed' => 'Alt-Right Misogynist',
   'adoptable' => 'Yes',
   'admission_date' => '2018-01-14',
-  'owner_id' => nil
+  'owner_id' => owner4.id
 )
 
 troll2.save
@@ -52,8 +52,7 @@ troll3 = Troll.new(
   'name' => 'Trevor Noah',
   'breed' => 'Angry Snowflake',
   'adoptable' => 'Yes',
-  'admission_date' => '2017-10-21',
-  'owner_id' => nil
+  'admission_date' => '2017-10-21'
 )
 
 troll3.save
@@ -62,8 +61,7 @@ troll4 = Troll.new(
   'name' => 'Milo Yiannopoulos',
   'breed' => 'Free Speech Scumbag',
   'adoptable' => 'Yes',
-  'admission_date' => '2017-03-10',
-  'owner_id' => nil
+  'admission_date' => '2017-03-10'
 )
 
 troll4.save
@@ -72,8 +70,7 @@ troll5 = Troll.new(
   'name' => 'Donald Trump',
   'breed' => 'Very Stable Genius',
   'adoptable' => 'Yes',
-  'admission_date' => '2018-03-30',
-  'owner_id' => nil
+  'admission_date' => '2018-03-30'
 )
 
 troll5.save
@@ -82,10 +79,9 @@ troll6 = Troll.new(
   'name' => 'Alex Jones',
   'breed' => 'Flat Earther',
   'adoptable' => 'No',
-  'admission_date' => '2016-07-18',
-  'owner_id' => nil,
+  'admission_date' => '2016-07-18'
 )
 
 troll6.save
 
-p Troll.all
+p owner4.troll

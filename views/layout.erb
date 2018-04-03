@@ -2,18 +2,20 @@
 <html>
 <head>
   <title>Troll Rehab Center</title>
-  <link href="https://fonts.googleapis.com/css?family=Amarante|Rye" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <nav>
-    <ul>
+    <ul class="navigation">
       <li><a href="/trolls">Home</a></li>
       <li><a href="/trolls/owners">All Owners</a></li>
       <li><a href="#">Register an Owner</a></li>
     </ul>
-  </nav>
-  <h1>Internet Troll Rehabilitation Center</h1>
+  <div class="hero-img">
+    <h1 class="site-title">Internet Troll Rehabilitation Center</h1>
+  </div>
+  <section class="page">
   <%= yield %>
+  </section>
 </body>
 </html>

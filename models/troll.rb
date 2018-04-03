@@ -11,7 +11,7 @@ class Troll
     @breed = options['breed']
     @adoptable = options['adoptable']
     @admission_date = options['admission_date']
-    @owner_id = options['owner_id']
+    @owner_id = options['owner_id'] if options['owner_id']
   end
 
   def save

@@ -1,1 +1,8 @@
 <p>The owners index.erb is working.</p>
+
+<% @owners.each do |owner| %>
+<p>Name: <%= owner.name %> </p>
+<p>Troll: <%= if owner.troll != nil then owner.troll.name %> </p>
+
+<% end %>
+<hr/>

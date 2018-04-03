@@ -49,6 +49,39 @@ class Owner
 
   end
 
+  ##can't get this to work
+  def troll
+    sql = "SELECT * FROM trolls INNER JOIN owners ON trolls.owner_id = owners.id"
+    troll_hash = SqlRunner.run(sql)
+    result = troll_hash.map {|troll| Troll.new (troll)}
+    return result
+  end
+  ###
+
+  # def troll()
+  #   sql = "SELECT trolls.*
+  #   FROM trolls
+  #   INNER JOIN owners
+  #   ON trolls.owner_id = owners.id
+  #   WHERE location_id = $1"
+  #   values = [@id]
+  #   user_data = SqlRunner.run(sql, values)
+  #   return User.map_items(user_data)
+  # end
+
+###
+# def users()
+#     sql = "SELECT users.*
+#     FROM users
+#     INNER JOIN visits
+#     ON visits.user_id = users.id
+#     WHERE location_id = $1"
+#     values = [@id]
+#     user_data = SqlRunner.run(sql, values)
+#     return User.map_items(user_data)
+#   end
+
+
   def update
 
     sql = "UPDATE owners SET
