@@ -12,14 +12,14 @@ end
 #view individual troll
 get '/trolls/:id' do
   @troll = Troll.find(params['id'])
-  erb(:show)
+  erb(:"trolls/show")
 end
 
 #edit individual troll
 get '/trolls/:id/edit' do
   @owners = Owner.all
   @troll = Troll.find(params['id'])
-  erb(:edit)
+  erb(:"trolls/edit")
 end
 
 #edit/post individual troll
