@@ -236,7 +236,7 @@ form input:last-of-type {
 
 .formbox {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   padding: 40px;
   min-width: 180px;
   max-width: 300px;

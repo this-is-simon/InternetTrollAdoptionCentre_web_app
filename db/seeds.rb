@@ -98,3 +98,10 @@ troll7 = Troll.new(
 )
 
 troll7.save
+
+# --------------------
+
+# We want a function on the Troll class called array_contains_number? that takes in an array and a number
+# returns true if number is in the array, otherwise false
+
+p troll7.array_contains_number?([1, 2, 3], 3)

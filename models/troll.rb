@@ -48,10 +48,11 @@ class Troll
 
   end
 
-  def self.find(id)
+  def self.find(which_id)
+    #Coming from the browser, going to the SQL through Ruby (the controller), and back up again
 
     sql = "SELECT * FROM trolls WHERE id = $1"
-    values = [id]
+    values = [which_id]
     result = SqlRunner.run(sql, values).first
     troll = Troll.new(result)
     return troll
@@ -95,6 +96,15 @@ class Troll
     sql = "DELETE FROM trolls"
     SqlRunner.run(sql)
 
+  end
+
+  def array_contains_number?(array, number)
+    for single_item in array
+      if number == single_item
+        return true
+      end
+    end
+    return false
   end
 
 end
