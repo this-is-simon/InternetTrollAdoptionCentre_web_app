@@ -140,7 +140,21 @@ p {
   width: 100%;
   margin: 2%;
 }
+
 /*  -------- Trollboxes --------- */
+
+.troll-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.troll-img img {
+  max-width: 300px;
+  margin: 0px 10px;
+  border-radius: 50%;
+}
+
 .trollbox {
   padding: 40px;
   flex: 1;
