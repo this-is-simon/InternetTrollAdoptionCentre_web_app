@@ -29,12 +29,12 @@ post '/trolls/:id' do
   end
   troll = Troll.new(params)
   troll.update
-  redirect to "/trolls"
+  id = params['id']
+  redirect to "/trolls/#{id}"
 end
 
 #delete troll by id
 post '/trolls/:id/delete' do
   troll = Troll.find(params['id'])
   troll.delete
-  redirect to '/trolls'
 end

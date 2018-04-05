@@ -1,3 +1,5 @@
+/* ------- Site-wide ---------- */
+
 body {
   margin: 0;
   margin-bottom: 30px;
@@ -25,8 +27,8 @@ p {
   background-image: url("/images/homeless.jpg");
   width: 100%;
   margin: 0;
-  background-position: 100% 45%;
-  height: 300px;
+  background-position: 100% 35%;
+  height: 230px;
   justify-content: flex-end;
   align-items: center;
 }
@@ -238,10 +240,6 @@ form input, label, textarea, select {
 
 form input {
   border-radius: 5px;
-}
-
-form button {
-  background: black;
 }
 
 form input:last-of-type {
