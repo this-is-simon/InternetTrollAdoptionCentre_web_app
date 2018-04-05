@@ -34,4 +34,5 @@ end
 post '/trolls/:id/delete' do
   troll = Troll.find(params['id'])
   troll.delete
+  redirect to "/trolls"
 end

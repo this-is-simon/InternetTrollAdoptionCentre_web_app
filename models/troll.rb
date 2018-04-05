@@ -77,10 +77,7 @@ class Troll
     )
     WHERE id = $6"
 
-
     owner_id_to_use = (@owner_id == "") ? nil : @owner_id
-
-
 
     values = [@name, @breed, @adoptable, @admission_date, owner_id_to_use, @id]
 
