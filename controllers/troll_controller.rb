@@ -24,9 +24,9 @@ end
 
 #edit/post individual troll
 post '/trolls/:id' do
-  if params['owner_id'] == ""
-    params['owner_id'] = nil
-  end
+  # if params['owner_id'] == ""
+  #   params['owner_id'] = nil
+  # end
   troll = Troll.new(params)
   troll.update
   id = params['id']

@@ -98,13 +98,4 @@ class Troll
 
   end
 
-  def array_contains_number?(array, number)
-    for single_item in array
-      if number == single_item
-        return true
-      end
-    end
-    return false
-  end
-
 end
