@@ -11,7 +11,6 @@ end
 
 #show create new owner form
 get '/owners/new' do
-  @trolls = Troll.all
   @owners = Owner.all
   erb(:"owners/new")
 end

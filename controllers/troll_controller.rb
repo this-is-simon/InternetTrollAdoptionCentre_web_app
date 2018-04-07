@@ -9,6 +9,19 @@ get '/trolls' do
   erb(:"trolls/index")
 end
 
+#show form for new troll
+get '/trolls/new' do
+  @trolls = Troll.all
+  erb(:"trolls/new")
+end
+
+#post form for new troll
+post '/trolls' do
+  troll = Troll.new(params)
+  troll.save
+  redirect '/trolls'
+end
+
 #view individual troll
 get '/trolls/:id' do
   @troll = Troll.find(params['id'])
