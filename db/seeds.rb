@@ -1,3 +1,4 @@
+require('pry')
 require_relative('../models/troll')
 require_relative('../models/owner')
 
